@@ -18,7 +18,7 @@ app.get('/nearest',cors(),function(req,res){
     }
 })
 app.post('/nearest',cors(),function(req,res){
-        console.log(req)
+        console.log("this is the req.body"+req.body)
         if(req.body.ButtonPressA == 1){
             buildingCode = 'ARN'
             console.log(req.body)
