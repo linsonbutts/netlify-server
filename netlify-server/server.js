@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors')
 
-
+console.log("hi")
 app.use(cors())
 const app = express()
 
