@@ -1,5 +1,6 @@
 const express = require('express');
-const cors = require('cors')
+const cors = require('cors');
+
 
 console.log("hi")
 
@@ -8,7 +9,7 @@ const app = express()
 let port = process.env.PORT || 8080
 let buildingCode = "WDF";
 
-app.get('/nearest',function(req,res){
+app.get('/nearest',cors(),function(req,res){
     if(buildingCode == 'WDF'){
         res.send('WDF')
     }
@@ -16,7 +17,7 @@ app.get('/nearest',function(req,res){
         res.send('ARN')
     }
 })
-app.post('/nearest',function(req,res){
+app.post('/nearest',cors(),function(req,res){
         if(req.body.ButtonPressA == 1){
             buildingCode = 'ARN'
             console.log(req.body)
@@ -29,8 +30,9 @@ app.post('/nearest',function(req,res){
         }
         
     })
-    app.use(cors())
     
+    app.use(cors())
+
 app.listen(port,()=>{
     console.log('Listening at port: '+port);
 })
