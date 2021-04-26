@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-
+const bodyParser = require('body-parser')
 
 const app = express()
 
@@ -30,10 +30,10 @@ app.post('/nearest',cors(),function(req,res){
         
     })
     
-app.use(express.json());
 app.use(express.urlencoded({
-  extended: true
-}));
+      extended: true
+    }));
+app.use(bodyParser.json())
 app.use(cors())
 
 app.listen(port,()=>{
