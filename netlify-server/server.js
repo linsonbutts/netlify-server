@@ -2,9 +2,7 @@ const express = require('express');
 const cors = require('cors');
 
 app.use(express.json());
-app.use(express.urlencoded({
-  extended: true
-}));
+
 const app = express()
 
 let port = process.env.PORT || 8080
