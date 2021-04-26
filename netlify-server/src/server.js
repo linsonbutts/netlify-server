@@ -16,11 +16,11 @@ app.use(cors(corsOptions));
 app.use(express.urlencoded({
   extended: true
 }));
-
+app.use(cors(corsOptions))
 
 let buildingCode = "WDF";
 
-router.get('/nearest', cors(corsOptions), function(req,res){
+router.get('/nearest',function(req,res){
     if(buildingCode == 'WDF'){
         res.send('WDF')
     }
@@ -28,7 +28,7 @@ router.get('/nearest', cors(corsOptions), function(req,res){
         res.send('ARN')
     }
 })
-router.post('/nearest',cors(corsOption),function(req,res){
+router.post('/nearest',function(req,res){
         if(req.body.ButtonPressA == 1){
             buildingCode = 'ARN'
             console.log(req.body)
