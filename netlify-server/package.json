@@ -8,8 +8,8 @@
     "npm": "6.14.11"
   },
   "scripts": {
-    "start": "node server.js",
-    "build": "node server.js"
+    "test": "echo \"Error: no text specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
