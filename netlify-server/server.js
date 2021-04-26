@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors')
 
 console.log("hi")
-app.use(cors())
+
 const app = express()
 
 let port = process.env.PORT || 8080
@@ -29,6 +29,8 @@ app.post('/nearest',function(req,res){
         }
         
     })
+    app.use(cors())
+    
 app.listen(port,()=>{
     console.log('Listening at port: '+port);
 })
