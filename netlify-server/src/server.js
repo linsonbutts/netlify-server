@@ -7,7 +7,7 @@ const router = express.Router();
 app.use(express.json());
 
 var corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: '*',
     optionsSuccessStatus: 200 // For legacy browser support
 }
 
