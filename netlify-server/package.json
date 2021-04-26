@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "./node_modules/.bin/netlify-lambda build src"
+    "build": "node server.js"
   },
   "keywords": [],
   "author": "",
