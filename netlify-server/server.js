@@ -6,6 +6,7 @@ const app = express()
 
 let port = process.env.PORT || 8080
 let buildingCode = "WDF";
+app.use(express.json())
 
 app.get('/nearest',cors(),function(req,res){
     if(buildingCode == 'WDF'){
@@ -29,7 +30,6 @@ app.post('/nearest',cors(),function(req,res){
         }
         
     })
-app.use(express.json())
 
 app.use(cors())
 
