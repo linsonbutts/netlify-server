@@ -1,22 +1,14 @@
 const express = require('express');
 const serverless = require('serverless-http')
-const cors = require('cors');
 const app = express()
 
 const router = express.Router();
 app.use(express.json());
 
-var corsOptions = {
-    origin: '*',
-    optionsSuccessStatus: 200 // For legacy browser support
-}
-
-app.use(cors(corsOptions));
 
 app.use(express.urlencoded({
   extended: true
 }));
-app.use(cors(corsOptions))
 
 let buildingCode = "WDF";
 
